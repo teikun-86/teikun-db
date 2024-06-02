@@ -1,0 +1,43 @@
+{
+  "name": "@teikun-86/database",
+  "version": "0.1.0",
+  "packageManager": "yarn@4.0.2",
+  "main": "dist/index.js",
+  "types": "dist/config-js.d.ts",
+  "type": "module",
+  "bin": {
+    "teikun-db:make-migration": "./dist/cli/create-migration.js",
+    "teikun-db:migrate": "./dist/cli/migrate.js",
+    "teikun-db:test": "./dist/cli/test-db.js"
+  },
+  "scripts": {
+    "test": "jest",
+    "build": "tsc --outDir ./dist",
+    "start": "node dist/index.js"
+  },
+  "keywords": [
+    "database-js",
+    "database",
+    "js-database",
+    "js"
+  ],
+  "author": "Aziz Febriyanto <azizfebriyanto12@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@teikun-86/config-js": "^0.2.4",
+    "@teikun-86/teikun-cli": "^0.2.2",
+    "fs": "^0.0.1-security",
+    "fs-extra": "^11.2.0",
+    "moment": "^2.30.1",
+    "mysql2": "^3.9.9",
+    "typescript": "^5.4.5"
+  },
+  "devDependencies": {
+    "@types/fs-extra": "^11",
+    "@types/jest": "^29.5.12",
+    "@types/node": "^20.12.12",
+    "jest": "^29.7.0",
+    "ts-jest": "^29.1.3"
+  },
+  "module": "esnext"
+}

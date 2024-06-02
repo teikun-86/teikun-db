@@ -1,0 +1,11 @@
+import Schema from "{{ SchemaImportPath }}";
+
+export default function {{ functionName }}(): Schema {
+	const {{ tableName }} = new Schema("{{ tableName }}");
+
+	{{ tableName }}.bigInteger("id", true, true).setPrimaryKey();
+	{{ tableName }}.setPrimaryKey("id");
+	{{ tableName }}.timestamps();
+
+	return {{ tableName }};
+}
